@@ -33,13 +33,15 @@ public class Level1 {
             }
         }
 
-        // Если встречается символ, не учитываемый таблицей из документации, используйте значение 23.
         int sum = 0;
         for (int i = 0; i < line.length(); i++) {
 
             for (int j = 0; j < tableChar.length; j++) {
                 if (line.charAt(i) == tableChar[j]) {
                     sum += tableInt[j];
+                    break;
+                } else if (j == tableChar.length - 1) {
+                    sum += 23;
                 }
             }
         }
@@ -47,7 +49,4 @@ public class Level1 {
         return sum;
     }
 
-    public static void main(String[] args) {
-        System.out.println(PrintingCosts("123"));
-    }
 }
