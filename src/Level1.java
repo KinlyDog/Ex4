@@ -35,7 +35,6 @@ public class Level1 {
 
         int sum = 0;
         for (int i = 0; i < line.length(); i++) {
-
             for (int j = 0; j < tableChar.length; j++) {
                 if (line.charAt(i) == tableChar[j]) {
                     sum += tableInt[j];
