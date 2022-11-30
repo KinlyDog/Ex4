@@ -1,7 +1,7 @@
 public class Level1 {
     public static int PrintingCosts(String line) {
         // printer ascii table
-        String table = " 0    !   9        \"   6        #  24        $  29        %  22\n " +
+        String tableAscii = " 0    !   9        \"   6        #  24        $  29        %  22\n " +
                 "&  24        '   3        (  12        )  12        *  17        +  13\n " +
                 ",   7        -   7        .   4        /  10        0  22        1  19\n " +
                 "2  22        3  23        4  21        5  27        6  26        7  16\n " +
@@ -19,7 +19,7 @@ public class Level1 {
                 "z  19        {  18        |  12        }  18        ~   9 ";
 
         // String table without ' ' and \n
-        String[] tbl = table.split("\\s+");
+        String[] tbl = tableAscii.split("\\s+");
         tbl[0] = " ";
 
         int[] tableInt = new int[tbl.length / 2];
