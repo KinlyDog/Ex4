@@ -22,14 +22,14 @@ public class Level1 {
         String[] tbl = tableAscii.split("\\s+");
         tbl[0] = " ";
 
-        int[] tableInt = new int[tbl.length / 2];
+        int[] decCode = new int[tbl.length / 2];
         char[] tableChar = new char[tbl.length / 2];
 
         for (int i = 0; i < tbl.length; i++) {
             if (i % 2 == 0) {
                 tableChar[i / 2] = tbl[i].charAt(0);
             } else {
-                tableInt[i / 2] = Integer.parseInt(tbl[i]);
+                decCode[i / 2] = Integer.parseInt(tbl[i]);
             }
         }
 
@@ -37,7 +37,7 @@ public class Level1 {
         for (int i = 0; i < line.length(); i++) {
             for (int j = 0; j < tableChar.length; j++) {
                 if (line.charAt(i) == tableChar[j]) {
-                    sum += tableInt[j];
+                    sum += decCode[j];
                     break;
                 } else if (j == tableChar.length - 1) {
                     sum += 23;
