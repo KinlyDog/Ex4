@@ -19,19 +19,20 @@ public class Level1 {
                 "z  19        {  18        |  12        }  18        ~   9 ";
 
         // String table without ' ' and \n
-        String[] tbl = ASCII_TABLE.split("\\s+");
-        tbl[0] = " ";
+        String[] asciiTable = ASCII_TABLE.split("\\s+");
+        asciiTable[0] = " ";
 
-        int[] decCode = new int[tbl.length / 2];
-        char[] tableChar = new char[tbl.length / 2];
+        int[] decCode = new int[asciiTable.length / 2];
+        char[] tableChar = new char[asciiTable.length / 2];
 
-        for (int i = 0; i < tbl.length; i++) {
+        for (int i = 0; i < asciiTable.length; i++) {
             if (i % 2 == 0) {
-                tableChar[i / 2] = tbl[i].charAt(0);
+                tableChar[i / 2] = asciiTable[i].charAt(0);
             } else {
-                decCode[i / 2] = Integer.parseInt(tbl[i]);
+                decCode[i / 2] = Integer.parseInt(asciiTable[i]);
             }
         }
+        asciiTable = null;
 
         int sum = 0;
         for (int i = 0; i < line.length(); i++) {
