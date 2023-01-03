@@ -32,7 +32,6 @@ public class Level1 {
                 decCode[i / 2] = Integer.parseInt(asciiTable[i]);
             }
         }
-        asciiTable = null;
 
         int sum = 0;
         for (int i = 0; i < line.length(); i++) {
