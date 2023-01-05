@@ -33,19 +33,19 @@ public class Level1 {
             }
         }
 
-        int sum = 0;
+        int tonerUsage = 0;
         for (int i = 0; i < line.length(); i++) {
             for (int j = 0; j < tableChar.length; j++) {
                 if (line.charAt(i) == tableChar[j]) {
-                    sum += decCode[j];
+                    tonerUsage += decCode[j];
                     break;
                 } else if (j == tableChar.length - 1) {
-                    sum += 23;
+                    tonerUsage += 23;
                 }
             }
         }
 
-        return sum;
+        return tonerUsage;
     }
 
 }
